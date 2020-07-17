@@ -16,11 +16,8 @@ public class Cipher {
 		
 		String enternumbers;
 		int total;
-		int firstNumber;
-		int secondNumber;
-		int thirdNumber;
-		int fourthNumber;
-		int fifthNumber;
+		int firstNumber, secondNumber, thirdNumber, fourthNumber, fifthNumber, encryptedNumber;
+		
 		int num1;
 		int num2;
 		int num3;
@@ -39,14 +36,16 @@ public class Cipher {
 		System.out.println("Fifth Number:");
 		fifthNumber = scan.nextInt();
 		
+		System.out.println("Your key is:" + key);
+		
+		
 		if (firstNumber > 19) //is there a way to do this for all of them together instead of separately?
 		{ //is it best system practice to have this be blank before and after the grouping?
 			System.out.println("Please read directions ad try again!");
 			System.exit(0);
 		}
 		 
-		scan. close();
-		
+	
 		total = firstNumber + secondNumber + thirdNumber + fourthNumber + fifthNumber;
 		
 		//Split number to digits 0 through 9
@@ -56,15 +55,16 @@ public class Cipher {
 			num1 = total/10;
 			num2 = total%10; //I am not sure if I did this right...
 		}
-		
+		num1 = total/10;
+		num2 = total%10;
 		num3 = (num1 + key)%10; //what does it mean when num1 hasn't been initialized? I don't want to assign a number above so should I use string
 		num4 = (num2 + key)%10;
 		
-		System.out.println(num3 + num4);
+		encryptedNumber = num3 + num4;
 		
 		System.out.println(total); // might have to delete this line later
 		
-		
+		System.out.println("Encrypted Number is:" + encryptedNumber);
 		
 	}
 
