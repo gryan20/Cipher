@@ -8,7 +8,7 @@ public class Cipher {
 	public static void validateNumber(int numberToValidate) {
 		if (numberToValidate>19)
 		{ 
-			System.out.println("Please read directions and try again");
+			System.out.println("Please read directions and try again!");
 			System.exit(0);
 		}
 	
@@ -27,11 +27,12 @@ public class Cipher {
 		int key = rand.nextInt(10); // I chose 10 to be inclusive to 9
 
 		System.out.println("Programming Fundamentals");
-		System.out.println("NAME: Gabby");
+		System.out.println("NAME: Gabby Ryan");
 		System.out.println("PROGRAMMING ASSIGNMENT 1 - Cipher");
 		System.out.println("");
 		System.out.println("Welcome to the Cipher Program");
 		System.out.println("Please enter 5 numbers between 0 and 19");
+		
 		System.out.println("1st Number: ");
 		firstNumber = scan.nextInt();
 		validateNumber(firstNumber);
@@ -61,6 +62,7 @@ public class Cipher {
 		num4 = ((num2 + key) % 10);
 		String eOneDigit = "" + num4;
 
+		System.out.println("");
 		System.out.println("Total = " + total);
 		System.out.println("Your random key is: " + key);
 		System.out.println("Encrypted Number: " + eTenDigit + eOneDigit);
